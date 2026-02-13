@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importing a cute font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="viewport">
+    <div class="main-wrapper" id="mainWrapper">
+        <!-- SCENE 1: The Valentine Card -->
+        <section class="scene" id="scene-card">
+            <div class="container">
+                <img id="display-image"  src="Images/propose.gif" alt="Propose">
+            <h1 id="question">Will you be my Valentine? 💖</h1>
+            <div class="buttons">
+                <button id="yesButton">Yes!</button>
+                <button id="noButton">No</button>
+                <button id="nextButton">Next →</button>
+            </div>
+        </section>
+
+        <!-- SCENE 2: The 3 Gifts -->
+        <section class="scene" id="scene-gifts">
+            <div class="container">
+                <h2 id="pick-a-gift">Pick a Gift 🎁</h2>
+                <div class="gift-container">
+                    <div class="gift" onclick="showCoupons()">
+                        <img src="Images/present.png" alt="Present">
+                    </div>
+                    <div class="gift" onclick="showCollage()">
+                        <img src="Images/present.png" alt="Present">
+                    </div>
+                    <div class="gift" onclick="startFlowers()">
+                        <img src="Images/present.png" alt="Present">
+                    </div>
+                </div>
+                <!-- Dynamic Content Area -->
+                <div id="gift-content">
+    <!-- The Slider Container (Hidden initially) -->
+    <div id="coupon-slider" class="slider-container hide">
+        <div class="slider-viewport">
+            <div class="slider-track" id="sliderTrack">
+                <!-- Coupon 1 -->
+                <div class="coupon-card">
+                    <h3>Valentine's VIP</h3>
+                    <div class="coupon-title">FREE HUGS</div>
+                    <p>Redeemable Anytime</p>
+                    <hr style="border-color: #1a1a1a;">
+                    <div class="expiry">EXPIRY: NONE</div>
+                </div>
+                <!-- Coupon 2 -->
+                <div class="coupon-card">
+                    <h3>Valentine's VIP</h3>
+                    <div class="coupon-title">DINNER DATE</div>
+                    <p>Your Choice of Place</p>
+                    <hr style="border-color: #1a1a1a;">
+                    <div class="expiry">EXPIRY: NONE</div>
+                </div>
+                <!-- Coupon 3 -->
+                <div class="coupon-card">
+                    <h3>Valentine's VIP</h3>
+                    <div class="coupon-title">MOVIE PICK</div>
+                    <p>I'll Watch Anything!</p>
+                    <hr style="border-color: #1a1a1a;">
+                    <div class="expiry">EXPIRY: NONE</div>
+                </div>
+                <!-- Coupon 4 -->
+                <div class="coupon-card">
+                    <h3>Valentine's VIP</h3>
+                    <div class="coupon-title">COFFEE DATE</div>
+                    <p>Extra Sugar Included</p>
+                    <hr style="border-color: #1a1a1a;">
+                    <div class="expiry">EXPIRY: NONE</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-nav">
+            <button class="nav-btn" onclick="moveSlider(-1)">❮</button>
+            <button class="nav-btn" onclick="moveSlider(1)">❯</button>
+        </div>
+
+        <div class="back-button" style="margin-top:10px; text-align:center;">
+            <button onclick="showGifts()" id="back-to-gifts">← Back to Gifts</button>
+        </div>
+    </div>
+
+    <div class="collage-grid hide">
+            <div class="collage" onclick="openCollageModal()">
+                <img src="" alt="Collage" id="collage-image">
+            </div>
+
+            <div class="back-button" style="margin-top:10px; text-align:center;">
+            <button onclick="showGifts()" id="back-to-gifts">← Back to Gifts</button>
+        </div>
+        </div>
+
+    <!-- Collage Modal -->
+    <div id="collageModal" class="modal hide">
+        <div class="modal-content">
+            <span class="close" onclick="closeCollageModal()">&times;</span>
+            <img src="" alt="Collage Full View" id="modal-image">
+        </div>
+    </div>
+
+    <div class="valentine-package hide">
+            <div class="package">
+                <img src="Images/bouquet.png" alt="Bouquet" class="bouquet">
+                <img src="Images/teddy-bear.png" alt="Teddy Bear" class="teddy">
+                <img src="Images/chocolate.png" alt="chocolate" class="chocolate">
+            </div>
+
+            <div class="back-button" style="margin-top:10px; text-align:center;">
+            <button onclick="showGifts()" id="back-to-gifts">← Back to Gifts</button>
+        </div>
+        </div>
+                </div>
+
+                
+            </div>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
