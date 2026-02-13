@@ -46,7 +46,7 @@ yesButton.addEventListener("click", () => {
 	question.innerHTML =
 		"Yay! I knew you'd say yes! 🥰</br> I have some gifts for you!  🎁";
 	image.classList.add("fade-in"); // Trigger fade-in animation
-	image.src = "Images/Happy.gif";
+	image.src = "Images/happy.gif";
 
 	// Hide the No button
 	noButton.style.display = "none";
